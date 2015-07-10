@@ -1,13 +1,20 @@
-<h1>New Posts Will Be Made Here</h1>
+<div id="page_wrapper">
+	<h1>New Posts</h1>
 
-<%=	form_for :post, url: posts_path do |f| %>
-	<p>
-		<%= f.label :title %> <br>
-		<%= f.text_field :title %> <br> 
+	<%=	form_for :post, url: posts_path do |f| %>
+		<p>
+			<%= f.label :title %> <br>
+			<%= f.text_field :title %>
+		</p>
 
-		<%= f.label :body %> <br>
-		<%= f.text_area :body %> <br>
+		<p>
+			<%= f.label :body %> <br>
+			<%= f.text_area :body %>
 
-		<%= f.submit %>
-	</p>
-<% end %>
+		</p>
+
+		<p>
+			<%= f.submit %>
+		</p>
+	<% end %>
+</div>
